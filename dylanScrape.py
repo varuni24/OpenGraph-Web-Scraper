@@ -45,13 +45,17 @@ def scrape_site(url):
     except:
         if itemTitle:
             print(f'Title: {itemTitle.text}')
-    
+
+    if itemDescription:
+        print(f'Description: {itemDescription["content"]}')
+    if itemPrice:
+        print(f'Price: {itemPrice["content"]}')
+    if itemCurrency:
+        print(f'Currency: {itemCurrency["content"]}')        
     if itemType:
         print(f'Type: {itemType["content"]}')
     if itemImage:
         print(f'Image: {itemImage["content"]}')
-    if itemDescription:
-        print(f'Description: {itemDescription["content"]}')
     
     try:
         if itemUrl:
@@ -59,11 +63,6 @@ def scrape_site(url):
     except:
         if itemUrl:
             print(f'URL: {itemUrl}')
-
-    if itemPrice:
-        print(f'Price: {itemPrice["content"]}')
-    if itemCurrency:
-        print(f'Currency: {itemCurrency["content"]}')
 
     
     
@@ -90,5 +89,5 @@ def scrape_site(url):
 
 
 #Test
-search_query = 'https://www.beefcakeswimwear.com/products/the-groove'
+search_query = 'https://www.adoredvintage.com/collections/dresses/products/sweet-romantic-vintage-inspired-ivory-floral-lace-lace-up-midi-dress'
 scrape_site(search_query)
