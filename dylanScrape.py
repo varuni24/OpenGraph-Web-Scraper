@@ -97,5 +97,5 @@ def scrape_site(url):
 
 
 #Test
-search_query = 'https://www.walmart.ca/en/ip/sony-mdr-xb550apb-on-ear-extra-bass-headphones-black/6000196928351'
+search_query = 'https://www.bestbuy.ca/en-ca/product/open-box-samsung-50-4k-uhd-hdr-led-tizen-smart-tv-un50au8000fxzc-2021/15935418'
 scrape_site(search_query)
