@@ -35,34 +35,39 @@ def scrape_site(url):
 
 
     # Regular print statements 
-
-    if siteName:
-        print(f'Site Name: {siteName["content"]}')
-
     try:
-        if itemTitle:
-            print(f'Title: {itemTitle["content"]}')
-    except:
-        if itemTitle:
-            print(f'Title: {itemTitle.text}')
+        if siteName:
+            print(f'Site Name: {siteName["content"]}')
 
-    if itemDescription:
-        print(f'Description: {itemDescription["content"]}')
-    if itemPrice:
-        print(f'Price: {itemPrice["content"]}')
-    if itemCurrency:
-        print(f'Currency: {itemCurrency["content"]}')        
-    if itemType:
-        print(f'Type: {itemType["content"]}')
-    if itemImage:
-        print(f'Image: {itemImage["content"]}')
-    
-    try:
+        if itemTitle:
+            try:
+                print(f'Title: {itemTitle["content"]}')
+            except:
+                print(f'Title: {itemTitle.text}')
+
+        if itemDescription:
+            try:
+                print(f'Description: {itemDescription["content"]}')
+            except:
+                print(f'Description: {itemDescription}')
+        
+        if itemPrice:
+            print(f'Price: {itemPrice["content"]}')
+        if itemCurrency:
+            print(f'Currency: {itemCurrency["content"]}')        
+        if itemType:
+            print(f'Type: {itemType["content"]}')
+        if itemImage:
+            print(f'Image: {itemImage["content"]}')
+        
         if itemUrl:
-            print(f'URL: {itemUrl["content"]}')
+            try:
+                print(f'URL: {itemUrl["content"]}')
+            except:
+                print(f'URL: {itemUrl}')
+
     except:
-        if itemUrl:
-            print(f'URL: {itemUrl}')
+        print("There was an error getting the OG tags from this site")
 
     
     
@@ -89,5 +94,5 @@ def scrape_site(url):
 
 
 #Test
-search_query = 'https://www.adoredvintage.com/collections/dresses/products/sweet-romantic-vintage-inspired-ivory-floral-lace-lace-up-midi-dress'
+search_query = 'https://blnts.com/products/6302-39662303-aero-hawaiian-print-short-sleeve-resort-shirt'
 scrape_site(search_query)
