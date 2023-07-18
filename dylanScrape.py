@@ -3,11 +3,14 @@
 import requests
 from bs4 import BeautifulSoup
 
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.1234.5678 Safari/537.36",
+}
 
 def scrape_site(url):
     
     # Send a GET request to the search URL
-    response = requests.get(url)
+    response = requests.get(url, headers=headers)
 
     # Create a BeautifulSoup object to parse the HTML content
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -35,34 +38,39 @@ def scrape_site(url):
 
 
     # Regular print statements 
-
-    if siteName:
-        print(f'Site Name: {siteName["content"]}')
-
     try:
-        if itemTitle:
-            print(f'Title: {itemTitle["content"]}')
-    except:
-        if itemTitle:
-            print(f'Title: {itemTitle.text}')
+        if siteName:
+            print(f'Site Name: {siteName["content"]}')
 
-    if itemDescription:
-        print(f'Description: {itemDescription["content"]}')
-    if itemPrice:
-        print(f'Price: {itemPrice["content"]}')
-    if itemCurrency:
-        print(f'Currency: {itemCurrency["content"]}')        
-    if itemType:
-        print(f'Type: {itemType["content"]}')
-    if itemImage:
-        print(f'Image: {itemImage["content"]}')
-    
-    try:
+        if itemTitle:
+            try:
+                print(f'Title: {itemTitle["content"]}')
+            except:
+                print(f'Title: {itemTitle.text}')
+
+        if itemDescription:
+            try:
+                print(f'Description: {itemDescription["content"]}')
+            except:
+                print(f'Description: {itemDescription}')
+        
+        if itemPrice:
+            print(f'Price: {itemPrice["content"]}')
+        if itemCurrency:
+            print(f'Currency: {itemCurrency["content"]}')        
+        if itemType:
+            print(f'Type: {itemType["content"]}')
+        if itemImage:
+            print(f'Image: {itemImage["content"]}')
+        
         if itemUrl:
-            print(f'URL: {itemUrl["content"]}')
+            try:
+                print(f'URL: {itemUrl["content"]}')
+            except:
+                print(f'URL: {itemUrl}')
+
     except:
-        if itemUrl:
-            print(f'URL: {itemUrl}')
+        print("There was an error getting the OG tags from this site")
 
     
     
@@ -89,5 +97,5 @@ def scrape_site(url):
 
 
 #Test
-search_query = 'https://www.adoredvintage.com/collections/dresses/products/sweet-romantic-vintage-inspired-ivory-floral-lace-lace-up-midi-dress'
+search_query = 'https://www.walmart.ca/en/ip/sony-mdr-xb550apb-on-ear-extra-bass-headphones-black/6000196928351'
 scrape_site(search_query)
