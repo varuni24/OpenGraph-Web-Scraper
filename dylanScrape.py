@@ -3,11 +3,14 @@
 import requests
 from bs4 import BeautifulSoup
 
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.1234.5678 Safari/537.36",
+}
 
 def scrape_site(url):
     
     # Send a GET request to the search URL
-    response = requests.get(url)
+    response = requests.get(url, headers=headers)
 
     # Create a BeautifulSoup object to parse the HTML content
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -94,5 +97,5 @@ def scrape_site(url):
 
 
 #Test
-search_query = 'https://blnts.com/products/6302-39662303-aero-hawaiian-print-short-sleeve-resort-shirt'
+search_query = 'https://www.walmart.ca/en/ip/sony-mdr-xb550apb-on-ear-extra-bass-headphones-black/6000196928351'
 scrape_site(search_query)
