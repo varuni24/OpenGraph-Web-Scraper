@@ -2,6 +2,11 @@
 // Documentation for the API
 //
 
+//
+// there's a lot of <br/> stuff and it feels redundant. if anyone knows
+// how to reduce this feel free to change it
+//
+
 export default function Documentation() {
   return (
     <div>
