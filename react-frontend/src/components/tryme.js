@@ -35,20 +35,35 @@ export default function TryMe() {
         {error && <p>{error}</p>}
   
         {extractedOGData && (
+        <div>
+          <h2>OG DATA:</h2>
           <div>
-            <h2>OG DATA:</h2>
-            <div>
-              <p>Site Name: {extractedOGData.siteName}</p>
-              <p>Title: {extractedOGData.itemTitle}</p>
-              <p>Description: {extractedOGData.itemDescription}</p>
-              <p>URL: <a href={extractedOGData.itemUrl}>{extractedOGData.itemUrl}</a> </p>
-              <p>Price: {extractedOGData.itemCurrency} {extractedOGData.itemPrice}</p>
-              <img src={extractedOGData.itemImage} alt="alternate-text" height={extractedOGData.itemImageHeight} width={extractedOGData.itemImageWidth} />
-            </div>
+            {extractedOGData.siteName && <p>Site Name: {extractedOGData.siteName}</p>}
+            {extractedOGData.itemTitle && <p>Title: {extractedOGData.itemTitle}</p>}
+            {extractedOGData.itemDescription && <p>Description: {extractedOGData.itemDescription}</p>}
+            {extractedOGData.itemUrl && (
+              <p>
+                URL: <a href={extractedOGData.itemUrl}>{extractedOGData.itemUrl}</a>
+              </p>
+            )}
+            {extractedOGData.itemCurrency && extractedOGData.itemPrice && (
+              <p>
+                Price: {extractedOGData.itemCurrency} {extractedOGData.itemPrice}
+              </p>
+            )}
+            {extractedOGData.itemImage && (
+              <img
+                src={extractedOGData.itemImage}
+                alt="alternate-text"
+                height={extractedOGData.itemImageHeight}
+                width={extractedOGData.itemImageWidth}
+              />
+            )}
           </div>
-        )}
-  
-        {clickedSearch && fetched && !extractedOGData && <p>No OG tags found!</p>}
-      </div>
-    );
-  }
+        </div>
+      )}
+
+      {clickedSearch && fetched && !extractedOGData && <p>No OG tags found!</p>}
+    </div>
+  );
+}
