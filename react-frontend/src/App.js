@@ -1,61 +1,31 @@
-import React, { useState } from 'react';
-import { Routes, Route, Outlet, Link } from "react-router-dom";
-import Documentation from "./components/documentation.js";
-import TryMe from './components/tryme.js';
+import React from 'react';
+import { Routes, Route} from "react-router-dom";
+import HomePage from './components/HomePage';
+import NavigationBar from './components/NavigationBar';
+import DocumentationPage from './components/DocumentationPage';
+import TryMePage from './components/TryMePage'; 
 
 
-export default function App() {
+
+function App() {
   return (
     <div>
-      <h1>cool website!!</h1>
 
+      <div>
+        <NavigationBar />
+      </div>
+
+      <h1>Open Graph Web Scrapper</h1>
 
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="documentation" element={<Documentation />} />
-          <Route path="tryme" element={<TryMe />} />
-          <Route path="*" element={<NoMatch />} />
-        </Route>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/documentation" element={<DocumentationPage />} />
+        <Route path="/tryme" element={<TryMePage />} />
       </Routes>
+
     </div>
   );
 }
 
-function Layout() {
-  return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/documentation">Documentation</Link>
-          </li>
-          <li>
-            <Link to="/tryme">Try Me!</Link>
-          </li>
-        </ul>
-      </nav>
+export default App
 
-      <hr />
-      <Outlet />
-    </div>
-  );
-}
-
-function Home() {
-
-}
-
-function NoMatch() {
-  return (
-    <div>
-      <h2>Nothing to see here!</h2>
-      <p>
-        <Link to="/">Go to the home page</Link>
-      </p>
-    </div>
-  );
-}
