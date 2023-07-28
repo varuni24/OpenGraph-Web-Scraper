@@ -112,6 +112,13 @@ function NavigationBar() {
             {/* mobile menu */}
             <div class={isMobileMenuOpen ? "block" : "hidden"}>
               <a
+                href="/"
+                class="block py-2 px-4 text-white hover:text-gray-500"
+                onClick={() => navigate("/")}
+              >
+                Home
+              </a>
+              <a
                 href="/documentation"
                 class="block py-2 px-4 text-white hover:text-gray-500"
                 onClick={() => navigate("/documentation")}
