@@ -9,7 +9,7 @@ function HomePage() {
           Web Scraping, <br className="block md:hidden" />
           <span className="relative">
             <span className="h-20 pt-5 overflow-x-hidden whitespace-nowrap text-brand-accent text-white font-bold">
-              Made Easy.
+            &nbsp;Made Easy.
             </span>
             <span className="cursor absolute -bottom-1 left-0 -top-1 inline-block bg-indigo-400 w-full animate-type will-change"></span>
           </span>
