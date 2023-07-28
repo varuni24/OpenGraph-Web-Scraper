@@ -10,7 +10,7 @@ function HomePage() {
 
   return (
     <>
-      <div id="first_page" className="h-screen">
+      <div id="first_page" className="h-screen scroll-smooth">
         <h1 className="flex justify-center items-center mb-2 font-mono text-7xl text-black md:text-7xl font-bold pt-[25%]">
           Web Scraping,&nbsp;
           <br className="block md:hidden" />
@@ -27,7 +27,7 @@ function HomePage() {
           </button>
         </div>
       </div>
-      <div id="second_page" className="h-screen bg-white">
+      <div id="second_page" className="h-screen bg-white scroll-smooth">
         <div className="bg-gray-100 flex items-center justify-center h-screen pt-20">
           <div className="bg-white shadow-md p-8 w-4/5">
             <h2
