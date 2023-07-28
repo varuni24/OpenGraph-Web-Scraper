@@ -109,7 +109,7 @@ function DocumentationPage() {
 
             <h2
               className="text-5xl font-bold pt-[4%] mb-4"
-              data-aos-delay="300"
+              data-aos-delay="100"
               data-aos="fade-right"
               data-aos-duration="800">
               Structure of the API response
@@ -117,7 +117,8 @@ function DocumentationPage() {
             <p
               className="text-xl pl-[2%]"
               data-aos-anchor-placement="center-bottom"
-              data-aos-delay="150" data-aos="fade-right"
+              data-aos-delay="200"
+              data-aos="fade-right"
               data-aos-duration="800">
             The API returns a JSON (structured as a list) as follows: <br/>
             </p>
