@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+import "../styles.css";
 
 function NavigationBar() {
   // State to manage the visibility of the mobile menu
@@ -33,7 +34,7 @@ function NavigationBar() {
   return (
     <>
       <div class="flex flex-nowrap items-center justify-center">
-        <nav class="w-4/5 bg-black sticky top-0 mt-2 rounded-full">
+        <nav class="stick z-50 bg-black">
           <div class="mx-auto px-5">
             <div class="flex justify-between">
               <div class="flex space-x-4">

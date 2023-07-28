@@ -45,9 +45,14 @@
   transform-origin: bottom left;
 }
 
-.panel-container {
-  position: relative;
-  overflow: hidden; /* This will hide any content that exceeds the container's boundaries */
+.stick {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.stick + .content {
+  padding-top: 60px;
 }
 
 .will-change-transform {
