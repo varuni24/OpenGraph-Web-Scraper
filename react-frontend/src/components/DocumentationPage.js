@@ -98,8 +98,6 @@ function DocumentationPage() {
               The API call:
             </h3> 
 
-            {/*  past this is incomplete*/}
-
             <div
               className="italic pl-[2%]"
               data-aos-delay="100"
