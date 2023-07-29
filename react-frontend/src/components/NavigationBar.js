@@ -3,29 +3,20 @@ import { useNavigate } from "react-router";
 import "../styles.css";
 
 function NavigationBar() {
-  // State to manage the visibility of the mobile menu
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const navigate = useNavigate();
 
-  // Event handler to toggle the mobile menu visibility
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
   };
 
-  // Effect to hide the mobile menu when the screen size enlarges
   useEffect(() => {
     const handleResize = () => {
-      // Check the current viewport width and close the mobile menu if it's open
       if (window.innerWidth >= 768) {
         setIsMobileMenuOpen(false);
       }
     };
-
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -39,7 +30,6 @@ function NavigationBar() {
             <div class="flex justify-between">
               <div class="flex space-x-4">
                 <div class="mr-4">
-                  {/* logo */}
                   <li class="flex items-center py-4 px-2 text-white">
                     <svg
                       class="h-10 w-10 mr-2 text-blue-500 mr-1 cursor-default"
@@ -63,7 +53,6 @@ function NavigationBar() {
                 <div class="flex items-center space-x-1"></div>
               </div>
 
-              {/* sections */}
               <div class="hidden md:flex flex items-center space-x-1">
                 <a
                   href="/"
@@ -88,7 +77,6 @@ function NavigationBar() {
                 </a>
               </div>
 
-              {/* mobile button */}
               <div class="mobile-menu-button md:hidden flex items-center">
                 <button onClick={handleMobileMenuToggle}>
                   <svg

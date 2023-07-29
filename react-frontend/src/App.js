@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 import NavigationBar from "./components/NavigationBar";
 import DocumentationPage from "./components/DocumentationPage";
 import TryMePage from "./components/TryMePage";
+import FooterBar from "./components/FooterBar";
 import "./index.css";
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         <Route path="/documentation" element={<DocumentationPage />} />
         <Route path="/tryme" element={<TryMePage />} />
       </Routes>
+      <div>
+        <FooterBar />
+      </div>
     </div>
   );
 }
