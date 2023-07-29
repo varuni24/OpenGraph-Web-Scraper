@@ -2,14 +2,14 @@ import React from "react";
 
 const FooterBar = () => {
   return (
-    <footer className="mt-10 bg-black text-white p-4">
+    <footer className="bg-black text-white p-4">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <div className="mt-3">
-              Made by Dylan, Daniel, Varuni, David, and Marcus
+            Made by Dylan, Daniel, Varuni, David, and Marcus
           </div>
-          <div  className="text-center text-sm">
-              For any feedback, contact xyz@gmail.com
+          <div className="text-center text-sm">
+            For any feedback, contact xyz@gmail.com
           </div>
         </div>
       </div>
