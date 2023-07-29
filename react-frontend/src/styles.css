@@ -21,30 +21,6 @@
   }
 }
 
-.hover-underline-animation-black {
-  display: inline-block;
-  position: relative;
-  color: white;
-}
-
-.hover-underline-animation-black:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 4px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation-black:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 .hover-underline-animation-white {
   display: inline-block;
   position: relative;
