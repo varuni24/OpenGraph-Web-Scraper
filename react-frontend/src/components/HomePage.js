@@ -27,68 +27,69 @@ function HomePage() {
           </button>
         </div>
       </div>
-      <div id="second_page" className="h-screen bg-white scroll-smooth">
-        <div className="bg-gray-100 flex items-center justify-center h-screen pt-20">
-          <div className="bg-white shadow-md p-8 w-4/5">
-            <h2
-              className="flex justify-center items-center font-mono text-4xl text-black md:text-4xl font-bold pb-8"
-              data-aos-delay="100"
-              data-aos="fade-down"
+      <div
+        id="second_page"
+        className="flex items-center justify-center h-screen bg-gray-100 pt-20 scroll-smooth"
+      >
+        <div className="bg-white shadow-md p-8 w-4/5">
+          <h2
+            className="flex justify-center items-center font-mono text-4xl text-black md:text-4xl font-bold pb-8"
+            data-aos-delay="100"
+            data-aos="fade-down"
+            data-aos-duration="800"
+          >
+            OpenGraph Tags, At Your Fingertips
+          </h2>
+          <div class="flex items-center justify-center pb-8">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0533/2089/files/shopify-online-store.jpg?v=1624557750"
+              class="h-auto w-4/5 border-black border-4"
+              alt="shopify-website"
+            />
+          </div>
+          <div class="flex items-center justify-center pb-8">
+            <h3
+              className="font-mono text-xl text-black text-center md:text-xl"
+              data-aos-delay="300"
+              data-aos="fade-right"
               data-aos-duration="800"
+              data-aos-offset="0"
             >
-              OpenGraph Tags, At Your Fingertips
-            </h2>
-            <div class="flex items-center justify-center pb-8">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0533/2089/files/shopify-online-store.jpg?v=1624557750"
-                class="h-auto w-4/5 border-black border-4"
-                alt="shopify-website"
-              />
+              Our API successfully scrapes Open Graph tags off of thousands of
+              Shopify websites so that you don't have to. Built using Flask and
+              Python's BeautifulSoup library, the OG tags are scraped and
+              compiled from the target URL and is available for use just one
+              simple API call away.
+            </h3>
+          </div>
+          <div class="flex items-center justify-center">
+            <div
+              class="font-mono text-xl text-black text-center md:text-xl"
+              data-aos-delay="500"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-offset="0"
+            >
+              &lt;&nbsp;
             </div>
-            <div class="flex items-center justify-center pb-8">
-              <h3
-                className="font-mono text-xl text-black text-center md:text-xl"
-                data-aos-delay="300"
-                data-aos="fade-right"
-                data-aos-duration="800"
-                data-aos-offset="0"
-              >
-                Our API successfully scrapes Open Graph tags off of thousands of
-                Shopify websites so that you don't have to. Built using Flask
-                and Python's BeautifulSoup library, the OG tags are scraped and
-                compiled from the target URL and is available just one simple
-                API call away.
-              </h3>
-            </div>
-            <div class="flex items-center justify-center">
-              <div
-                class="font-mono text-xl text-black text-center md:text-xl"
-                data-aos-delay="500"
-                data-aos="fade-right"
-                data-aos-duration="800"
-                data-aos-offset="0"
-              >
-                &lt;&nbsp;
-              </div>
-              <button
-                class="font-mono text-xl text-black text-center md:text-xl hover-underline-animation-black"
-                data-aos-delay="500"
-                data-aos="fade-right"
-                data-aos-duration="800"
-                data-aos-offset="0"
-                onClick={() => navigate("/documentation")}
-              >
-                Discover More
-              </button>
-              <div
-                class="font-mono text-xl text-black text-center md:text-xl"
-                data-aos-delay="500"
-                data-aos="fade-right"
-                data-aos-duration="800"
-                data-aos-offset="0"
-              >
-                &nbsp;&gt;
-              </div>
+            <button
+              class="font-mono text-xl text-black text-center md:text-xl hover-underline-animation-black"
+              data-aos-delay="500"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-offset="0"
+              onClick={() => navigate("/documentation")}
+            >
+              Go to Documentation
+            </button>
+            <div
+              class="font-mono text-xl text-black text-center md:text-xl"
+              data-aos-delay="500"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-offset="0"
+            >
+              &nbsp;&gt;
             </div>
           </div>
         </div>
