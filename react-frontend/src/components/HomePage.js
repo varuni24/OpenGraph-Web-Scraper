@@ -54,7 +54,7 @@ function HomePage() {
             </div>
             <div class="flex items-center justify-center pb-8">
               <h3
-                className="font-serif text-xl text-white text-center md:text-xl"
+                className="font-serif text-2xl text-white text-center md:text-2xl"
                 data-aos-delay="300"
                 data-aos="fade-up"
                 data-aos-duration="800"
@@ -62,9 +62,9 @@ function HomePage() {
               >
                 Our API successfully scrapes Open Graph tags off of thousands of
                 Shopify websites so that you don't have to. Built using Flask
-                and Python's BeautifulSoup library, the OG tags are scraped and
-                compiled from the target URL and is available just one simple
-                API call away.
+                and Python's BeautifulSoup library, the OG tags are scraped,
+                compiled and formatted from the target URL and is available just
+                one simple API call away.
               </h3>
             </div>
             <div class="flex items-center justify-center">
