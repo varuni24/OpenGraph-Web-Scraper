@@ -1,26 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function DocumentationPage() {
+  const [displayedCode, setDisplayedCode] = useState("javascript");
   AOS.init();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
       <div className="mt-0 flex items-center justify-center min-h-screen bg-indigo-400">
-        <div className="mx-10 my-20 grid grid-rows-1 grid-cols-3 gap-6 px-4 py-8">
-
+        <div className="mx-10 my-20 grid grid-rows-1 gap-6 px-4 py-8">
           {/* What the API does? */}
           <div
-            className="rounded-lg shadow-md p-4 bg-indigo-900 w-full text-white"
+            className="rounded-lg shadow-md p-4 bg-indigo-950 w-full text-white"
             style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
             data-aos="flip-left"
-            data-aos-delay="100"
           >
-            <h2 className="text-3xl font-bold mb-4 text-center">
-              What the API does?
-            </h2>
-            <div className="text-lg">
+            <h2 className="text-3xl font-bold mb-4">What the API does?</h2>
+            <div className="text-xl">
               <p>
                 The API is designed to interact with websites that follow the
                 Open Graph Protocol. By using the link to a webpage, the API can
@@ -34,108 +35,195 @@ function DocumentationPage() {
 
           {/* API Parameter and Response */}
           <div
-            className="rounded-lg shadow-md p-4 bg-indigo-900 w-full text-white"
+            className="rounded-lg shadow-md p-4 bg-indigo-950 w-full text-white"
             style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
             data-aos="flip-left"
-            data-aos-delay="300"
           >
-            <h2 className="text-3xl font-bold mb-4 text-center">
+            <h2 className="text-3xl font-bold mb-8 ">
               API Parameter and Response
             </h2>
-            <div className="text-lg">
-              <p>
-                <strong>Request Parameters:</strong>
-              </p>
-              <p>
-                The URL of the webpage to be scraped must
-                follow the Open Graph Procedure and contain relevant Open Graph
-                meta tags.
+
+            <div>
+              <p className="text-2xl font-bold">Request Parameters:</p>
+              <div className="flex flex-row mt-3">
+                <p className="text-lg bg-gray-800 px-2 rounded-lg mr-3 font-bold">
+                  url
+                </p>
+                <p className="text-lg px-2 text-orange-300 mr-3"> string </p>
+                <p className="text-lg px-2 text-orange-700 mr-3"> Required </p>
+              </div>
+              <p className="text-md mt-2">
+                {" "}
+                - URL of the website to be scrapped
               </p>
               <br></br>
-              <p>
-                <strong>Response Format:</strong>
-              </p>
-              <p>
-                The API response is in JSON format and contains the content of the og tags extracted
-                from the webpage's Open Graph tags.
-              </p>
-            </div>
-          </div>
 
-          {/* Few Data Fields Returned by API */}
-          <div
-            className="rounded-lg shadow-md p-4 bg-indigo-900 w-full text-white"
-            style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
-            data-aos="flip-left"
-            data-aos-delay="200"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-center">
-              Few Data Fields Returned by API
-            </h2>
-            <div className="text-lg">
-              <p>Some of the Open Graph fields extracted by the API includes:</p>
-              <p className="pl-4 mb-5 italic">
-                description: (str) <br />
-                image: (URL) <br />
-                title: (str) <br />
-                type: (str) <br />
-                url: (URL) <br />
-                price: (str) <br />
-                siteName: (str) <br />
-              </p>
-            </div>
-          </div>
-
-          {/* Sample API Usage */}
-          <div
-            className="rounded-lg shadow-md p-4 bg-indigo-900 w-full text-white"
-            style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
-            data-aos="flip-left"
-            data-aos-delay="400"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-center">
-              Sample API Usage
-            </h2>
-            <div className="text-lg">
-              <p>
-                <strong>Example API Call:</strong>
-              </p>
-              
-              <div className="text-sm"><code>{`GET /scrape?url=https://example.com`}</code></div>
-              <br />
-              <p>
-                <strong>Example Response:</strong>
-              </p>
-              <div className="text-sm" style={{ whiteSpace: "pre-wrap", overflowWrap: "break-word" }}>
-                <code>
-                  {`{
-"title": "Example Website Heading",
-"description": "This is sample description for the website url given.",
-"image": "https://example.com/image1",
-"author": "XYZ",
-"url": "https://example.com"
-}`} </code>
+              <p className="text-2xl font-bold">Response Schema:</p>
+              <div className="flex flex-row mt-3">
+                <p className="text-lg bg-gray-800 px-2 rounded-lg mr-3 font-bold">
+                  title
+                </p>
+                <p className="text-lg px-2 text-orange-300 mr-3"> string </p>
               </div>
-              <p className="text-sm"> etc... </p>
+              <p className="text-md mt-2"> - title of the webiste </p>
+
+              <div className="flex flex-row mt-3">
+                <p className="text-lg bg-gray-800 px-2 rounded-lg mr-3 font-bold">
+                  description
+                </p>
+                <p className=" text-lg px-2 text-orange-300 mr-3"> string </p>
+              </div>
+              <p className="text-md mt-2">
+                - breif description of the website content
+              </p>
+
+              <div className="flex flex-row mt-3">
+                <p className="text-lg bg-gray-800 px-2 rounded-lg mr-3 font-bold">
+                  {" "}
+                  url
+                </p>
+                <p className="text-lg px-2 text-orange-300 mr-3"> url </p>
+              </div>
+              <p className="text-md mt-2"> - website url </p>
+
+              <div className="text-lg flex flex-row mt-3">
+                <p className="text-lg bg-gray-800 px-2 rounded-lg mr-3 font-bold">
+                  image
+                </p>
+                <p className="px-2 text-orange-300 mr-3"> url </p>
+              </div>
+              <p className="text-md mt-2">- image link from the website url</p>
+
+              <div className="flex flex-row mt-3">
+                <p className="text-lg bg-gray-800 px-2 rounded-lg mr-3 font-bold">
+                  type{" "}
+                </p>
+                <p className="text-lg px-2 text-orange-300 mr-3"> string </p>
+              </div>
+              <p className="text-md mt-2"> - type of the website </p>
+
+              <div className="flex flex-row mt-3">
+                <p className="text-lg bg-gray-800 px-2 rounded-lg mr-3 font-bold">
+                  price
+                </p>
+                <p className="text-lg px-2 text-orange-300 mr-3"> string </p>
+              </div>
+              <p className="text-md mt-2">
+                - price of the product in the website url
+              </p>
+
+              <div className="flex flex-row mt-3">
+                <p className="bg-gray-800 px-2 rounded-lg mr-3 font-bold">
+                  siteName
+                </p>
+                <p className="px-2 text-orange-300 mr-3"> string </p>
+              </div>
+              <p className="text-md mt-2"> - name of the website</p>
             </div>
           </div>
 
-          {/* JavaScript Code Snippet */}
+          {/* API Call */}
           <div
-            className="rounded-lg shadow-md p-4 bg-indigo-900 w-full text-white"
+            className="rounded-lg shadow-md p-4 bg-indigo-950 w-full text-white"
             style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
             data-aos="flip-left"
-            data-aos-delay="500"
           >
-            <h2 className="text-3xl font-bold mb-4 text-center">
-              JavaScript Code using API
-            </h2>
+            <div className="my-4 ml-2">
+              <h2 className="text-3xl font-bold mb-4 "> API Call</h2>
+
+              <div className="text-lg">
+                <p className="mt-6 mb-4 text-xl font-bold">API Request:</p>
+
+                <div className="flex flex-row text-md">
+                  <code className="px-2 rounded-lg bg-blue-800">GET</code>
+                  <code>
+                    {" "}
+                    {`........????!!!/scrape?url=https://example.com`}
+                  </code>
+                </div>
+
+                <br />
+
+                <p className="my-4 text-xl font-bold">Sample Response:</p>
+                <div
+                  className="text-md"
+                  style={{ whiteSpace: "pre-wrap", overflowWrap: "break-word" }}
+                >
+                  <p>
+                    <div>
+                      <code className="text-green-400"> "title": </code>
+                      <code className="text-yellow-300">
+                        "Example Website Heading",
+                      </code>
+                    </div>
+
+                    <div>
+                      <code className="text-green-400"> "description": </code>
+                      <code className="text-yellow-300">
+                        "This is sample description for the website url given.",
+                      </code>
+                    </div>
+
+                    <div>
+                      <code className="text-green-400"> "image": </code>
+                      <code className="text-yellow-300">
+                        "https://example.com/image1",
+                      </code>
+                    </div>
+
+                    <div>
+                      <code className="text-green-400"> "url": </code>
+                      <code className="text-yellow-300">
+                        "https://example.com",
+                      </code>
+                    </div>
+                  </p>
+                </div>
+                <p className="mt-2 text-xl">...</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Code Snippet */}
+          <div
+            className="rounded-lg shadow-md bg-indigo-950 w-full text-white"
+            style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
+            data-aos="flip-left"
+          >
+            <div className="mt-4 ml-2 p-4">
+              <h2 className="text-3xl font-bold mb-4"> Code Snippets </h2>
+              <div className="my-6 space-x-4">
+                <button
+                  className={`p-2 rounded-lg font-bold ${
+                    displayedCode === "javascript"
+                      ? "bg-white text-indigo-600"
+                      : "bg-indigo-600 text-white"
+                  }`}
+                  onClick={() => setDisplayedCode("javascript")}
+                >
+                  JavaScript
+                </button>
+                <button
+                  className={`p-2 rounded-lg font-bold ${
+                    displayedCode === "python"
+                      ? "bg-white text-indigo-600"
+                      : "bg-indigo-600 text-white"
+                  }`}
+                  onClick={() => setDisplayedCode("python")}
+                >
+                  Python
+                </button>
+              </div>
+            </div>
+
             <div
-              className="text-white text-sm"
+              className="bg-black text-white text-md rounded-lg p-8 "
               style={{ whiteSpace: "pre-wrap", overflowWrap: "break-word" }}
             >
-              <code>
-                {`const url = 'https://example.com';
+              <code className="text-green-300">
+                {displayedCode === "javascript" ? (
+                  <>
+                    {`const url = 'https://example.com';
 
 fetch('https://....../scrape?url=' + encodeURIComponent(url))
   .then((response) => response.json())
@@ -145,40 +233,24 @@ fetch('https://....../scrape?url=' + encodeURIComponent(url))
   .catch((error) => {
     console.error('Error occurred:', error);
   });`}
-              </code>
-            </div>
-          </div>
-
-          {/* Python Code Snippet */}
-          <div
-            className="rounded-lg shadow-md p-4 bg-indigo-900 w-full text-white"
-            style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
-            data-aos="flip-left"
-            data-aos-delay="600"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-center">
-              Python Code using API
-            </h2>
-            <div
-              className="text-white text-sm"
-              style={{ whiteSpace: "pre-wrap", overflowWrap: "break-word" }}
-            >
-              <code>
-                {`import requests
+                  </>
+                ) : (
+                  <>
+                    {`import requests
 
 url = 'https://example.com'
-response = requests.get(f'https://...../scrape?url={url})
+response = requests.get(f'https://...../scrape?url={url}')
 
 if response.status_code == 200:
     data = response.json()
     print(data)
 else:
     print('Error occurred:', response.text)`}
+                  </>
+                )}
               </code>
             </div>
           </div>
-
-
         </div>
       </div>
     </>
