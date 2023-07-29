@@ -111,7 +111,7 @@ function TryMePage() {
 
           {fetched && extractedOGData && (
             <div
-              className="p-6 border-4 border-transparent rounded-md max-h-96 max-w-96 text-blue-300 bg-stone-900 whitespace-pre-wrap"
+              className="p-6 border-4 border-transparent rounded-md text-blue-300 bg-stone-900 whitespace-pre-wrap"
               style={{
                 boxShadow:
                   "0 0 10px #000000, 0 0 20px #000000, 0 0 40px #5D3FD3, 0 0 80px #5D3FD3",

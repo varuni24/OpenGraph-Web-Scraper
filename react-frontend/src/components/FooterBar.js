@@ -6,7 +6,7 @@ const FooterBar = () => {
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <div className="mt-3">
-              Made by Dylan, Daniel, Varuni, David, and Marcus
+              Made by Daniel, David, Dylan, Marcus, and Varuni
           </div>
           <div  className="text-center text-sm">
               For any feedback, contact xyz@gmail.com
