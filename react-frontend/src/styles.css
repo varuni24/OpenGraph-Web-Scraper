@@ -24,7 +24,7 @@
 .hover-underline-animation-black {
   display: inline-block;
   position: relative;
-  color: black;
+  color: white;
 }
 
 .hover-underline-animation-black:after {
