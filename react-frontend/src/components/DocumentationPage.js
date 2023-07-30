@@ -12,12 +12,12 @@ function DocumentationPage() {
 
   return (
     <>
-      <div className="mt-0 flex items-center justify-center min-h-screen bg-indigo-400">
-        <div className="mx-10 my-20 grid grid-rows-1 gap-6 px-4 py-8">
+      <div className="mt-0 flex items-center justify-center min-h-screen">
+        <div className="mx-10 my-20 grid grid-rows-1 gap-10 px-4 py-8">
           {/* What the API does */}
           <div
             className="rounded-lg shadow-md p-4 bg-indigo-950 w-full text-white"
-            style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
+            style={{ boxShadow: "0 0 20px #5D3FD3, 0 0 20px #5D3FD3" }}
             data-aos="flip-left"
             data-aos-offset="0"
           >
@@ -37,7 +37,7 @@ function DocumentationPage() {
           {/* API Parameter and Response */}
           <div
             className="rounded-lg shadow-md p-4 bg-indigo-950 w-full text-white"
-            style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
+            style={{ boxShadow: "0 0 20px #5D3FD3, 0 0 20px #5D3FD3" }}
             data-aos="flip-left"
             data-aos-offset="0"
           >
@@ -127,7 +127,7 @@ function DocumentationPage() {
           {/* API Call */}
           <div
             className="rounded-lg shadow-md p-4 bg-indigo-950 w-full text-white"
-            style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
+            style={{ boxShadow: "0 0 30px #5D3FD3, 0 0 30px #5D3FD3" }}
             data-aos="flip-left"
             data-aos-offset="0"
           >
@@ -138,11 +138,8 @@ function DocumentationPage() {
                 <p className="mt-6 mb-4 text-xl font-bold">API Request:</p>
 
                 <div className="flex flex-row text-md">
-                  <code className="px-2 rounded-lg bg-blue-800">GET</code>
-                  <code>
-                    {" "}
-                    {`........????!!!/scrape?url=https://example.com`}
-                  </code>
+                  <code className="px-2 rounded-lg bg-blue-800">GET </code> 
+                  <code>&nbsp; {`........????!!!/scrape?url=https://example.com`}</code>
                 </div>
 
                 <br />
@@ -153,6 +150,7 @@ function DocumentationPage() {
                   style={{ whiteSpace: "pre-wrap", overflowWrap: "break-word" }}
                 >
                   <p>
+                    &#123;
                     <div>
                       <code className="text-green-400"> "title": </code>
                       <code className="text-yellow-300">
@@ -182,7 +180,8 @@ function DocumentationPage() {
                     </div>
                   </p>
                 </div>
-                <p className="mt-2 text-xl">...</p>
+                <p className="mt-2 ml-10 text-xl">...</p>
+                &#125;
               </div>
             </div>
           </div>
@@ -190,7 +189,7 @@ function DocumentationPage() {
           {/* Code Snippet */}
           <div
             className="rounded-lg shadow-md bg-indigo-950 w-full text-white"
-            style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
+            style={{ boxShadow: "0 0 30px #5D3FD3, 0 0 30px #5D3FD3" }}
             data-aos="flip-left"
             data-aos-offset="0"
           >

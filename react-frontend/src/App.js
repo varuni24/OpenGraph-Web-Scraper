@@ -6,10 +6,11 @@ import DocumentationPage from "./components/DocumentationPage";
 import TryMePage from "./components/TryMePage";
 import FooterBar from "./components/FooterBar";
 import "./index.css";
+import backgroundImage from "./bkg3.jpg"
 
 function App() {
   return (
-    <div class="bg-indigo-400 overflow-x-hidden">
+    <div class="overflow-x-hidden bg-cover" style={{backgroundImage: `url(${backgroundImage})`}}>
       <div>
         <NavigationBar />
       </div>

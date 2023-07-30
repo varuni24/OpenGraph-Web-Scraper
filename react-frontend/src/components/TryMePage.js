@@ -50,10 +50,10 @@ function TryMePage() {
 
   return (
     <div>
-      <div className="bg-indigo-400 py-10 px-4 sm:px-6 lg:px-8 flex justify-center">
-        <div className="min-h-screen w-screen p-6 space-y-6 font-mono" style={{ fontFamily: "Montserrat, sans-serif" }}>
+      <div className="h-screen py-10 px-4 sm:px-6 lg:px-8 flex justify-center">
+        <div className="w-screen p-6 space-y-6 font-mono" style={{ fontFamily: "Montserrat, sans-serif" }}>
           <div className="text-center">
-            <p className="mt-14 mb-8 py-3 text-4xl font-bold text-violet-950	font-serif animate-bounce">
+            <p className="mt-14 mb-8 py-3 text-4xl font-bold text-white font-serif animate-bounce">
               Try the OpenGraph Web Scraper!
             </p>
           </div>
@@ -154,7 +154,7 @@ function TryMePage() {
 
           {clickedSearch && !extractedOGData && !loading && (
             <div className="text-center mt-6">
-              <p className="text-lg text-black">{error}</p>
+              <p className="text-lg text-white">{error}</p>
             </div>
           )}
         </div>

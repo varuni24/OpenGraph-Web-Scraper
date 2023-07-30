@@ -11,12 +11,12 @@ function HomePage() {
   return (
     <>
       <div id="first_page" className="h-screen scroll-smooth">
-        <h1 className="flex justify-center items-center mb-2 font-mono text-7xl text-black md:text-7xl font-bold pt-[25%]">
+        <h1 className="flex justify-center items-center mb-2 font-mono text-7xl text-white md:text-7xl font-bold pt-[25%]">
           Web Scraping,&nbsp;
           <br className="block md:hidden" />
           <span className="relative">
             <span className="h-20 pt-5 overflow-x-hidden whitespace-nowrap text-brand-accent text-white font-bold">
-              Made Easy.
+              Made Easy!
             </span>
             <span className="cursor absolute -bottom-1 left-0 -top-1 inline-block bg-indigo-400 w-full animate-type will-change"></span>
           </span>
@@ -31,7 +31,7 @@ function HomePage() {
       <div id="second_page" className="h-screen g-indigo-400 scroll-smooth">
         <div className="flex items-center justify-center h-screen pt-20">
           <div
-            className="bg-gray-800 shadow-md p-8 w-4/5 rounded-2xl"
+            className="bg-gray-800 shadow-md p-8 w-3/4 rounded-2xl"
             data-aos="zoom-in"
           >
             <h2
@@ -60,11 +60,9 @@ function HomePage() {
                 data-aos-duration="800"
                 data-aos-offset="0"
               >
-                Our API successfully scrapes Open Graph tags off of thousands of
-                Shopify websites so that you don't have to. Built using Flask
-                and Python's BeautifulSoup library, the OG tags are scraped,
-                compiled and formatted from the target URL and is available just
-                one simple API call away.
+                Easily get the Open Graph from thousands of websites without coding it! Built using Python's Flask and
+                Beautiful Soup libraries, the OG tags are scraped from the website URL and are made available 
+                to you just one simple API call away.
               </h3>
             </div>
             <div class="flex items-center justify-center">
