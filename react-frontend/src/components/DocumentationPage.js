@@ -14,13 +14,14 @@ function DocumentationPage() {
     <>
       <div className="mt-0 flex items-center justify-center min-h-screen bg-indigo-400">
         <div className="mx-10 my-20 grid grid-rows-1 gap-6 px-4 py-8">
-          {/* What the API does? */}
+          {/* What the API does */}
           <div
             className="rounded-lg shadow-md p-4 bg-indigo-950 w-full text-white"
             style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
             data-aos="flip-left"
+            data-aos-offset="0"
           >
-            <h2 className="text-3xl font-bold mb-4">What the API does?</h2>
+            <h2 className="text-3xl font-bold mb-4">Description</h2>
             <div className="text-xl">
               <p>
                 The API is designed to interact with websites that follow the
@@ -38,6 +39,7 @@ function DocumentationPage() {
             className="rounded-lg shadow-md p-4 bg-indigo-950 w-full text-white"
             style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
             data-aos="flip-left"
+            data-aos-offset="0"
           >
             <h2 className="text-3xl font-bold mb-8 ">
               API Parameter and Response
@@ -127,6 +129,7 @@ function DocumentationPage() {
             className="rounded-lg shadow-md p-4 bg-indigo-950 w-full text-white"
             style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
             data-aos="flip-left"
+            data-aos-offset="0"
           >
             <div className="my-4 ml-2">
               <h2 className="text-3xl font-bold mb-4 "> API Call</h2>
@@ -189,6 +192,7 @@ function DocumentationPage() {
             className="rounded-lg shadow-md bg-indigo-950 w-full text-white"
             style={{ boxShadow: "0 0 40px #5D3FD3, 0 0 80px #5D3FD3" }}
             data-aos="flip-left"
+            data-aos-offset="0"
           >
             <div className="mt-4 ml-2 p-4">
               <h2 className="text-3xl font-bold mb-4"> Code Snippets </h2>
