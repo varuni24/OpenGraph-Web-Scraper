@@ -60,7 +60,7 @@ function HomePage() {
                 data-aos-duration="800"
                 data-aos-offset="0"
               >
-                Easily get the Open Graph from thousands of websites without coding it! Built using Python's Flask and
+                Easily get the Open Graph data from thousands of websites without coding it! Built using Python's Flask and
                 Beautiful Soup libraries, the OG tags are scraped from the website URL and are made available 
                 to you just one simple API call away.
               </h3>
