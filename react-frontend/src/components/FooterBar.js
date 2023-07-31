@@ -9,7 +9,7 @@ const FooterBar = () => {
               Made by Daniel, David, Dylan, Marcus, and Varuni
           </div>
           <div className="text-center text-sm">
-            For any feedback, contact xyz@gmail.com
+            For any feedback, contact dylan.finlay33@gmail.com
           </div>
         </div>
       </div>

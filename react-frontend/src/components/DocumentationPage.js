@@ -56,7 +56,7 @@ function DocumentationPage() {
               </div>
               <p className="text-md mt-2">
                 {" "}
-                - URL of the website to be scrapped
+                - URL of the website to be scraped
               </p>
               <br></br>
 
@@ -76,7 +76,7 @@ function DocumentationPage() {
                 <p className=" text-lg px-2 text-orange-300 mr-3"> string </p>
               </div>
               <p className="text-md mt-2">
-                - breif description of the website content
+                - brief description of the website content
               </p>
 
               <div className="flex flex-row mt-3">
