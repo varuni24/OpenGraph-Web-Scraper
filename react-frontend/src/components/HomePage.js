@@ -18,7 +18,7 @@ function HomePage() {
             <span className="h-20 pt-5 overflow-x-hidden whitespace-nowrap text-brand-accent text-white font-bold">
               Made Easy!
             </span>
-            <span className="cursor absolute -bottom-1 left-0 -top-1 inline-block bg-indigo-400 w-full animate-type will-change"></span>
+            <span className="cursor absolute -bottom-1 left-0 -top-1 inline-block bg-[#250049] w-full animate-type will-change"></span>
           </span>
         </h1>
         <div className="flex flex-nowrap justify-center items-center pt-5">
