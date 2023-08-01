@@ -141,7 +141,8 @@ function DocumentationPage() {
 
                 <div className="flex flex-row text-md">
                   <code className="px-2 rounded-lg bg-blue-800">GET </code> 
-                  <code>&nbsp; {`https://webscraperapi.vercel.app/scrape?url=https://example.com`}</code>
+                  <code className="text-white-300">&nbsp;https://webscraperapi.vercel.app/scrape?url=</code>
+                  <code className="text-red-400"> https://example.com</code>
                 </div>
 
                 <br />
