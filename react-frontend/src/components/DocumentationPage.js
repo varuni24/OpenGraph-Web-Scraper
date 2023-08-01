@@ -20,6 +20,7 @@ function DocumentationPage() {
             style={{ boxShadow: "0 0 20px #5D3FD3, 0 0 20px #5D3FD3" }}
             data-aos="flip-left"
             data-aos-offset="0"
+            data-aos-delay="150"
           >
             <h2 className="text-3xl font-bold mb-4">Description</h2>
             <div className="text-xl">
@@ -40,6 +41,7 @@ function DocumentationPage() {
             style={{ boxShadow: "0 0 20px #5D3FD3, 0 0 20px #5D3FD3" }}
             data-aos="flip-left"
             data-aos-offset="0"
+            data-aos-delay="150"
           >
             <h2 className="text-3xl font-bold mb-8 ">
               API Parameter and Response
