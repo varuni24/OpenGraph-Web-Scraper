@@ -1,10 +1,11 @@
 # Open Graph Web Scraper & API
 
-<p align="center">
-  <img src="./imgs/WebScraper.png" alt="Web Scraper Banner" width="600" height="300" class="centered-image" />
-</p>
+![Project Logo](imgs/WebScraper.png)
+
 
 Welcome to the Open Graph Web Scraper & API project, developed by a team of dedicated programmers. This project aims to simplify the process of extracting Open Graph data from websites by providing a user-friendly API and a showcase website.
+
+This project was completed by a group of five individuals: Dylan Finlay, David He, Daniel Chenrui Zhang, Marcus Luong, and Varuni Gupta. It was completed in the month of July 2023, as a prototype for ShyftLabs, a software company in Toronto.
 
 ## Table of Contents
 
@@ -37,7 +38,7 @@ For detailed API documentation, please refer to [API Documentation](https://open
 
 ## Showcase Website
 
-Explore the capabilities of the Open Graph Web Scraper & API by visiting our showcase website: [Open Graph Web Scraper Showcase](https://open-graph-web-scraper.vercel.app/).
+Explore the capabilities of the Open Graph Web Scraper & API by visiting our showcase website: [Open Graph Web Scraper Home](https://open-graph-web-scraper.vercel.app/).
 
 The showcase website is built using React and Tailwind CSS, providing an intuitive interface to interact with the API and learn more about its features.
 
