@@ -55,7 +55,7 @@ function HomePage() {
             <div class="flex items-center justify-center pb-8">
               <h3
                 className="font-mono text-2xl text-white text-center md:text-2xl"
-                data-aos-delay="0"
+                data-aos-delay="300"
                 data-aos="fade-up"
                 data-aos-duration="800"
                 data-aos-offset="0"
@@ -68,7 +68,7 @@ function HomePage() {
             <div class="flex items-center justify-center">
               <div
                 class="font-mono text-2xl text-white font-bold text-center md:text-xl"
-                data-aos-delay="500"
+                data-aos-delay="600"
                 data-aos="fade"
                 data-aos-duration="800"
                 data-aos-offset="0"
@@ -77,7 +77,7 @@ function HomePage() {
               </div>
               <button
                 class="font-mono text-2xl text-white font-bold text-center md:text-xl hover-underline-animation-white"
-                data-aos-delay="500"
+                data-aos-delay="600"
                 data-aos="fade"
                 data-aos-duration="800"
                 data-aos-offset="0"
@@ -87,7 +87,7 @@ function HomePage() {
               </button>
               <div
                 class="font-mono text-2xl text-white font-bold text-center md:text-xl"
-                data-aos-delay="500"
+                data-aos-delay="600"
                 data-aos="fade"
                 data-aos-duration="800"
                 data-aos-offset="0"
