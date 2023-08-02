@@ -141,7 +141,7 @@ function DocumentationPage() {
 
                 <div className="flex flex-row text-md">
                   <code className="px-2 rounded-lg bg-blue-800">GET </code> 
-                  <code className="text-white-300">&nbsp;https://webscraperapi.vercel.app/scrape?url=</code>
+                  <code className="text-white-300">&nbsp;https://og-web-scraper-api.vercel.app/scrape?url=</code>
                   <code className="text-red-400"> https://example.com</code>
                 </div>
 
@@ -231,7 +231,7 @@ function DocumentationPage() {
                   <>
                     {`const url = 'https://example.com';
 
-fetch('https://webscraperapi.vercel.app/scrape?url=' + encodeURIComponent(url))
+fetch('https://og-web-scraper-api.vercel.app/scrape?url=' + encodeURIComponent(url))
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
@@ -245,7 +245,7 @@ fetch('https://webscraperapi.vercel.app/scrape?url=' + encodeURIComponent(url))
                     {`import requests
 
 url = 'https://example.com'
-response = requests.get(f'https://webscraperapi.vercel.app/scrape?url={url}')
+response = requests.get(f'https://og-web-scraper-api.vercel.app/scrape?url={url}')
 
 if response.status_code == 200:
     data = response.json()
