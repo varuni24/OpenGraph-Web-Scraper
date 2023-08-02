@@ -30,7 +30,7 @@ function TryMePage() {
     }
 
     fetch(
-      `https://webscraperapi.vercel.app/scrape?url=${encodeURIComponent(URL)}`
+      `https://og-web-scraper-api.vercel.app/scrape?url=${encodeURIComponent(URL)}`
     )
       .then((response) => response.json())
       .then((data) => {
