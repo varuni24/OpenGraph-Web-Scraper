@@ -53,7 +53,7 @@ function TryMePage() {
       <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8 flex justify-center">
         <div className="w-screen p-6 space-y-6 font-mono" style={{ fontFamily: "Montserrat, sans-serif" }}>
           <div className="text-center">
-            <p className="mt-14 mb-8 py-3 text-4xl font-bold text-white font-serif animate-bounce">
+            <p className="mt-14 mb-8 py-3 text-4xl font-bold text-white font-mono animate-bounce">
               Try the OpenGraph Web Scraper!
             </p>
           </div>
