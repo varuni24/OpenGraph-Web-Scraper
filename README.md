@@ -1,6 +1,8 @@
 # Open Graph Web Scraper & API
 
-![Project Logo](link_to_logo_image)
+<p align="center">
+  <img src="./imgs/WebScraper.png" alt="Web Scraper Banner" width="600" height="300" class="centered-image" />
+</p>
 
 Welcome to the Open Graph Web Scraper & API project, developed by a team of dedicated programmers. This project aims to simplify the process of extracting Open Graph data from websites by providing a user-friendly API and a showcase website.
 
