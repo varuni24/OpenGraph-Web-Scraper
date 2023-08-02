@@ -22,7 +22,7 @@ function HomePage() {
           </span>
         </h1>
         <div className="flex flex-nowrap justify-center items-center pt-5">
-          <button className="scroll-smooth text-2xl font-serif text-white md:text-4xl hover-underline-animation-white">
+          <button className="scroll-smooth text-2xl font-bold font-mono text-white md:text-4xl hover-underline-animation-white">
             <a href="#second_page">Learn More</a>
           </button>
         </div>
@@ -35,7 +35,7 @@ function HomePage() {
             data-aos="zoom-in"
           >
             <h2
-              className="flex justify-center items-center font-serif text-4xl text-white md:text-4xl font-bold pb-8"
+              className="flex justify-center items-center font-mono text-4xl text-white md:text-4xl font-bold pb-8"
               data-aos-delay="100"
               data-aos="fade-up"
               data-aos-duration="800"
@@ -54,7 +54,7 @@ function HomePage() {
             </div>
             <div class="flex items-center justify-center pb-8">
               <h3
-                className="font-serif text-2xl text-white text-center md:text-2xl"
+                className="font-mono text-2xl text-white text-center md:text-2xl"
                 data-aos-delay="300"
                 data-aos="fade-up"
                 data-aos-duration="800"
@@ -67,18 +67,18 @@ function HomePage() {
             </div>
             <div class="flex items-center justify-center">
               <div
-                class="font-serif text-xl text-white font-bold text-center md:text-xl"
-                data-aos-delay="300"
-                data-aos="fade-up"
+                class="font-mono text-2xl text-white font-bold text-center md:text-xl"
+                data-aos-delay="600"
+                data-aos="fade"
                 data-aos-duration="800"
                 data-aos-offset="0"
               >
                 &lt;&nbsp;
               </div>
               <button
-                class="font-serif text-xl text-white font-bold text-center md:text-xl hover-underline-animation-white"
-                data-aos-delay="300"
-                data-aos="fade-up"
+                class="font-mono text-2xl text-white font-bold text-center md:text-xl hover-underline-animation-white"
+                data-aos-delay="600"
+                data-aos="fade"
                 data-aos-duration="800"
                 data-aos-offset="0"
                 onClick={() => navigate("/documentation")}
@@ -86,9 +86,9 @@ function HomePage() {
                 Explore
               </button>
               <div
-                class="font-serif text-xl text-white font-bold text-center md:text-xl"
-                data-aos-delay="300"
-                data-aos="fade-up"
+                class="font-mono text-2xl text-white font-bold text-center md:text-xl"
+                data-aos-delay="600"
+                data-aos="fade"
                 data-aos-duration="800"
                 data-aos-offset="0"
               >
