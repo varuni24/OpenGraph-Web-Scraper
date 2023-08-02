@@ -4,7 +4,7 @@ from scraper import scrape_site
 
 
 app = Flask(__name__)
-CORS(app, origins='https://open-graph-web-scraper.vercel.app')
+CORS(app, origins=['https://open-graph-web-scraper.vercel.app', 'http://localhost:3000'])
 
 @app.route('/scrape', methods=['GET'])
 def scrape_site_handler():
