@@ -46,6 +46,6 @@ The showcase website is built using React and Tailwind CSS, providing an intuiti
 
 ## Contact
 
-For any inquiries or questions regarding the project, feel free to contact us at dylan.finlay33@gmail.com.
+For any inquiries or questions regarding the project, feel free to contact us at varuni2410@gmail.com & dylan.finlay33@gmail.com.
 
 Happy scraping and building amazing web applications with structured data!
